@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Stats</title>
+</head>
+<body>
+    <h1>Text Statistics</h1>
+    <table border="1">
+        <tr>
+            <th>Text</th>
+            <th>Word Count</th>
+            <th>Number Count</th>
+            <th>Comma Count</th>
+            <th>Dot Count</th>
+        </tr>
+        {% for text in texts %}
+        <tr>
+            <td>{{ text['text'] }}</td>
+            <td>{{ text['word_count'] }}</td>
+            <td>{{ text['number_count'] }}</td>
+            <td>{{ text['comma_count'] }}</td>
+            <td>{{ text['dot_count'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
