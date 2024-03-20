@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Editor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Registration</h1>
+        <div class="input-container">
+            <label for="username">Username:</label>
+            <input type="text" id="username" placeholder="Enter your name...">
+        </div>
+        <button onclick="register()">Register</button>
+        <div id="currentUsername" style="display: none;"></div> <!-- Display current user name here -->
+    </div>
+
+    <div id="textEditor" class="container" style="display: none;">
+        <h1>Text Editor</h1>
+        <p id="currentUserDisplay"></p> <!-- Display current user name here -->
+        <div class="input-container">
+            <label for="fileName">File Name:</label>
+            <input type="text" id="fileName" placeholder="Enter file name...">
+        </div>
+        <div class="input-container">
+            <textarea id="textInput" oninput="updateStats()" rows="10" placeholder="Enter your text here..."></textarea>
+        </div>
+        <div class="stats">
+            <h2>Statistics</h2>
+            <p><strong>Word Count:</strong> <span id="wordCount">0</span></p>
+            <p><strong>Letter Count:</strong> <span id="letterCount">0</span></p>
+            <p><strong>Number Count:</strong> <span id="numberCount">0</span></p>
+        </div>
+        <button onclick="saveText()">Save</button>
+        <h2>Saved Files:</h2>
+        <div id="savedFiles"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
